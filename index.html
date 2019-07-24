@@ -52,6 +52,25 @@
     <script src="https://kit.fontawesome.com/43f3cc2ec8.js"></script>
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+
+    <!--scripts-->
+    <script>
+      window.twttr = (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+        return t;
+      })(document, "script", "twitter-wjs");
+    </script>
   </head>
 
   <body>
@@ -105,7 +124,10 @@
                     </a>
                   </li>
                   <li>
-                    <a class="twitter" href="">
+                    <a
+                      class="twitter twitter-share-button"
+                      href="https://twitter.com/intent/tweet"
+                    >
                       <i class="fab fa-twitter"></i>
                     </a>
                   </li>
@@ -118,16 +140,6 @@
               </div>
             </div>
           </section>
-          <iframe
-            src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fmangelpt.github.io%2FportfolioTest%2F&layout=button_count&size=small&width=69&height=20&appId"
-            width="69"
-            height="20"
-            style="border:none;overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true"
-            allow="encrypted-media"
-          ></iframe>
           <!--SECTION PORTAFOLIO-->
           <section id="portfolio" class="portfolio">
             <h2>Portafolio</h2>
@@ -198,6 +210,19 @@
                       <li><span>CSS3</span></li>
                       <li><span>JS</span></li>
                     </ul>
+                    <div
+                      class="fb-share-button"
+                      data-href="https://mangelpt.github.io/portfolioTest/"
+                      data-layout="button_count"
+                      data-size="small"
+                    >
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmangelpt.github.io%2FportfolioTest%2F&amp;src=sdkpreparse"
+                        class="fb-xfbml-parse-ignore"
+                        >Share</a
+                      >
+                    </div>
                   </div>
                 </div>
               </article>
@@ -440,21 +465,5 @@
         body.classList.toggle("show-menu");
       });
     </script>
-
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId: "your-app-id",
-          autoLogAppEvents: true,
-          xfbml: true,
-          version: "v3.3"
-        });
-      };
-    </script>
-    <script
-      async
-      defer
-      src="https://connect.facebook.net/en_US/sdk.js"
-    ></script>
   </body>
 </html>
